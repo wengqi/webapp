@@ -1,6 +1,6 @@
 # webapp
 基于jquery等常规技术的前端工程架构范例
-# 项目目录结构说明
+# 目录结构
 ```
 webapp
     |-- app  //开发目录
@@ -20,7 +20,7 @@ webapp
     |    |      |-- index.js  //入口文件
     |    |      |-- routes.js  //前端路由
     |    |-- styles  //样式
-    |    |-- views  //模块页面/模版
+    |    |-- views  //模块页面/模板
     |    |-- index.html  //入口首页
     |-- dist  //编译输出目录
     |-- test  //单元测试
