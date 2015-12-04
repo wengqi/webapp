@@ -33,3 +33,8 @@ webapp
     |-- webpack.config.js //webpack配置文件
 
 ```
+# 环境搭建
+* 安装nodejs（官网找对应版本下载安装） 
+* 执行命令 npm install 
+* 编译 gulp build
+* 启动服务 gulp或gulp serve
