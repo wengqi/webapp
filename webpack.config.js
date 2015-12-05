@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var path = require("path");
 
 module.exports = {
   entry: './app/scripts/index.js',
@@ -10,14 +11,31 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].js'
+    path: path.join(__dirname, "dist/scripts"), 
+    publicPath: 'dist/scripts/',
+    filename: '[name].js',
+    chunkFilename: '[id].chunk.js'
   },
 
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query:{
+          "compact": false,
+          "presets": ["es2015", "stage-0"]
+        }
+      },
+      {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {test: /\.html$/, loader: "html" },
+      {
+        test: /\.tpl$/,
+        loader: 'nunjucks-loader'
       }
     ]
   },
