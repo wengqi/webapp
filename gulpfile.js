@@ -35,7 +35,9 @@ gulp.task('build', ['clean', 'scripts'],function(callback){
 });
 
 gulp.task('serve', function(callback){
-    connect.server();
+    connect.server({
+      port: 9001
+    });
 });
 
 gulp.task('default',['clean', 'scripts', 'watch', 'serve'], function(){
