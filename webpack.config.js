@@ -13,7 +13,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "dist/scripts"), 
-    publicPath: 'dist/scripts/',
+    publicPath: '../dist/scripts/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },

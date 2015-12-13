@@ -2,6 +2,11 @@
     var html = require('../../views/pcProducts/pcProducts.html');
     var tmp = require('../../views/pcProducts/_pcList.tpl');
 
+    //异步加载js示例
+    require(['lodash'], function(){
+        console.log(_);
+    });
+
     MyAppPcProducts.route = function() {
 
         MyAppServices.getPcList().done(function(data) {
@@ -64,10 +69,6 @@
                         return container;
                     }
                 }]
-            });
-
-            var tmpHtml = tmp.render({
-                "pcs": data
             });
         })
     }
