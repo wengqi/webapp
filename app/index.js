@@ -1,6 +1,7 @@
 /**
  * app 入口文件
  */
+require('./core/common.js');
 require('./core/config.js');
 require('./core/constant.js');
 require('./core/service.js');

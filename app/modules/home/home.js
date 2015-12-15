@@ -4,6 +4,7 @@ var Services = require('../../core/service.js');
 var CONSTANT = require('../../core/constant.js');
 
 console.log(CONSTANT.SYSTEM_NAME);
+
 function route(){
     Services.getTeachers().done(function(data){
         var teachersHtml = teachersTmp.render({"teachers": data});

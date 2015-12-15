@@ -25,6 +25,16 @@ function doAjax(url, params, method){
     return deferred.promise();
 }
 
+function setData(obj){
+
+}
+
+function getData(key){
+
+}
+
 module.exports = {
-    doAjax: doAjax
+    doAjax: doAjax,
+    setData: setData,
+    getData: getData
 };

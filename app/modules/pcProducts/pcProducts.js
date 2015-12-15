@@ -2,7 +2,7 @@
 var html = require('./pcProducts.html');
 var Services = require('../../core/service.js');
 
-function route(){
+function init(){
     Services.getPcList().done(function(data) {
         $('#main').html(html);
         var source = {
@@ -67,6 +67,10 @@ function route(){
             }]
         });
     })
+}
+
+function route(){
+    init();
 }
 
 module.exports = {
