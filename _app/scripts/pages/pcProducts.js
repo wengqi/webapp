@@ -1,12 +1,9 @@
 ;(function(MyAppPcProducts, undefined) {
+    //可以在最开始将本js需要的所有模版和html片段引入进来，也可以在需要使用的地方引入
     var html = require('../../views/pcProducts/pcProducts.html');
-    var tmp = require('../../views/pcProducts/_pcList.tpl');
-
-    //异步加载js示例
-    require(['lodash'], function(){
-        console.log(_);
-    });
-
+    MyAppPcProducts.sayHello = function(){
+        console.log('hello');
+    }
     MyAppPcProducts.route = function() {
 
         MyAppServices.getPcList().done(function(data) {
@@ -38,6 +35,8 @@
                     // value - cell's value.
                     // rowData - rendered row's object.
                     cellsRenderer: function(row, column, value, rowData) {
+                        //在需要使用模版的地方先将模版引入进来
+                        var tmp = require('../../views/pcProducts/_pcList.tpl');
                         var laptops = rowData.laptops;
                         var container = tmp.render({"laptops": laptops});
 
@@ -74,3 +73,7 @@
     }
 
 })(window.MyAppPcProducts = window.MyAppPcProducts || {});
+
+exports.sayName = function(){
+    console.log("my name is pcProducts");
+}

@@ -6,31 +6,39 @@ var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var less = require('gulp-less');
+var cssmin = require('gulp-minify-css');
+var fs = require('fs');
 
-var jsPath = './app/scripts/**/*.js';
-var libPath = './app/lib/**/*.js';
+var lessPath = ['./app/styles/**/*.css', './app/modules/**/*.css'];
+var jsPath = ['./app/index.js','./app/core/**/*.js','./app/modules/**/*.js'];
+
 gulp.task('clean', function(callback) {
-  del(['dist'], callback);
+  del(['app/build'], callback);
 });
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch([jsPath, libPath], ['build']);
+  gulp.watch(jsPath, ['scripts']);
+  gulp.watch(lessPath, ['buildcss']);
+});
+
+gulp.task('buildcss', function(){
+    gulp.src(lessPath)
+        .pipe(less())
+        .pipe(concat('main.css'))
+        .pipe(cssmin())
+        .pipe(gulp.dest('./app/build/'));
 });
 
 gulp.task('scripts', function(){
     gulp.src(jsPath)
         .pipe(gulpWebpack(webpackConfig))
-        .pipe(gulp.dest('./dist/scripts/'))
-        .pipe(livereload());
-    gulp.src(libPath)
-        .pipe(concat('lib.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/scripts/')) 
+        .pipe(gulp.dest('./app/build/'))
         .pipe(livereload());
 });
 
-gulp.task('build', ['clean', 'scripts'],function(callback){
+gulp.task('build', ['clean', 'scripts', 'buildcss'],function(callback){
     
 });
 
@@ -40,6 +48,6 @@ gulp.task('serve', function(callback){
     });
 });
 
-gulp.task('default',['clean', 'scripts', 'watch', 'serve'], function(){
+gulp.task('default',['clean', 'scripts', 'buildcss', 'watch', 'serve'], function(){
 
 });

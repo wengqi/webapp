@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require("path");
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './_app/scripts/index.js',
 
   resolve: {
     //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, "app/build"), 
+    path: path.join(__dirname, "_app/build"), 
     publicPath: 'build/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
@@ -20,15 +20,15 @@ module.exports = {
 
   module: {
     loaders: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'babel',
-      //   query:{
-      //     "compact": false,
-      //     "presets": ["es2015", "stage-0"]
-      //   }
-      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query:{
+          "compact": false,
+          "presets": ["es2015", "stage-0"]
+        }
+      },
       {
         test: /\.json$/,
         loader: 'json-loader'

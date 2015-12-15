@@ -10,5 +10,5 @@ require('./pages/footer.js');
 require('./pages/home.js');
 require('./pages/pcProducts.js');
 
-
+//路由文件放在最后
 require('./routes.js');
