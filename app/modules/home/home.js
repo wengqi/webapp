@@ -2,11 +2,13 @@ var homeHtml = require('./home.html');
 var teachersTmp = require('./_teachers.tpl');
 var Services = require('../../core/service.js');
 var CONSTANT = require('../../core/constant.js');
+var U = require('../../core/util.js');
 
 console.log(CONSTANT.SYSTEM_NAME);
 
-function route(){
+function render(){
     Services.getTeachers().done(function(data){
+        console.log(U.getData('pcProducts'));
         var teachersHtml = teachersTmp.render({"teachers": data});
         $('#main').html(homeHtml);
         $('#teachers').html(teachersHtml);
@@ -14,5 +16,5 @@ function route(){
 }
 
 module.exports = {
-    route: route
+    render: render
 };

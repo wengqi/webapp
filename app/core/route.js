@@ -3,9 +3,9 @@
 var M = require('./module.js');
 
 var routes = {
-    '/': M.home.route,
-    '/Home': M.home.route,
-    '/PCProducts': M.pcProducts.route,
+    '/': M.home.render,
+    '/Home': M.home.render,
+    '/PCProducts': M.pcProducts.render,
     '/(\\w+)': function(){$('#main').html('<h1>Other Page!</h1>')}
 };
 

@@ -1,9 +1,13 @@
 //可以在最开始将本js需要的所有模版和html片段引入进来，也可以在需要使用的地方引入
 var html = require('./pcProducts.html');
 var Services = require('../../core/service.js');
+var U = require('../../core/util.js');
 
 function init(){
     Services.getPcList().done(function(data) {
+
+        U.setData('pcProducts', data);
+
         $('#main').html(html);
         var source = {
             localData: data,
@@ -69,10 +73,10 @@ function init(){
     })
 }
 
-function route(){
+function render(){
     init();
 }
 
 module.exports = {
-    route: route
+    render: render
 };
