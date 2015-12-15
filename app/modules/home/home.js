@@ -1,7 +1,7 @@
 var homeHtml = require('./home.html');
 var teachersTmp = require('./_teachers.tpl');
-var Services = require('../../common/service.js');
-var CONSTANT = require('../../common/constant.js');
+var Services = require('../../core/service.js');
+var CONSTANT = require('../../core/constant.js');
 
 console.log(CONSTANT.SYSTEM_NAME);
 function route(){

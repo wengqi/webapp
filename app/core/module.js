@@ -1,3 +1,5 @@
+/* -----------------------业务模块集合------------------------ */
+
 module.exports = {
     header: require('../modules/header/header.js'),
     footer: require('../modules/footer/footer.js'),
