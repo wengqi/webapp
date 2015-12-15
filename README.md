@@ -44,7 +44,7 @@ webapp
     |    |-- build  //js编译输出目录
     |    |-- mock  //模拟后台数据，格式为标准json文件
     |    |-- styles  //公共样式，和每个模块不相关的样式
-    |    |-- core  //核心函数
+    |    |-- core  //核心公共函数
     |    |      |-- config.js  //定义系统配置
     |    |      |-- constant.js  //定义系统常量
     |    |      |-- services.js  //服务类

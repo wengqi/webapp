@@ -1,10 +1,9 @@
 var homeHtml = require('./home.html');
 var teachersTmp = require('./_teachers.tpl');
-var Services = require('../../core/service.js');
-var CONSTANT = require('../../core/constant.js');
+var Services = require('../../common/service.js');
+var CONSTANT = require('../../common/constant.js');
 
 console.log(CONSTANT.SYSTEM_NAME);
-
 function route(){
     Services.getTeachers().done(function(data){
         var teachersHtml = teachersTmp.render({"teachers": data});

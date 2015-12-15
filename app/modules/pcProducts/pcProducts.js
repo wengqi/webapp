@@ -1,6 +1,6 @@
-var Services = require('../../core/service.js');
 //可以在最开始将本js需要的所有模版和html片段引入进来，也可以在需要使用的地方引入
 var html = require('./pcProducts.html');
+var Services = require('../../common/service.js');
 
 function route(){
     Services.getPcList().done(function(data) {
