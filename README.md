@@ -1,5 +1,6 @@
 # 概要
 基于jquery等常规技术的前端工程架构范例
+_app, _gulpfile.js, _webpack.config.js为第一版已技术划分目录结构的代码，已不维护，不推荐使用。
 # 目录结构（第一版）
 ```
 webapp
