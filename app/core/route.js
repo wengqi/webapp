@@ -6,6 +6,7 @@ var routes = {
     '/': M.home.render,
     '/Home': M.home.render,
     '/PCProducts': M.pcProducts.render,
+    '/Education': M.education.render,
     '/(\\w+)': function(){$('#main').html('<h1>Other Page!</h1>')}
 };
 

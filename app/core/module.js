@@ -4,5 +4,6 @@ module.exports = {
     header: require('../modules/header/header.js'),
     footer: require('../modules/footer/footer.js'),
     home: require('../modules/home/home.js'),
-    pcProducts: require('../modules/pcProducts/pcProducts.js')
+    pcProducts: require('../modules/pcProducts/pcProducts.js'),
+    education: require('../modules/education/education.js')
 };

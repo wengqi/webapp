@@ -12,6 +12,7 @@ var fs = require('fs');
 
 var lessPath = ['./app/styles/**/*.css', './app/modules/**/*.css'];
 var jsPath = ['./app/index.js','./app/core/**/*.js','./app/modules/**/*.js'];
+var viewPath = ['./app/modules/**/*.html', './app/modules/**/*.tpl']
 
 gulp.task('clean', function(callback) {
   del(['app/build'], callback);
@@ -21,6 +22,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(jsPath, ['buildjs']);
   gulp.watch(lessPath, ['buildcss']);
+  gulp.watch(viewPath, ['buildjs']);
 });
 
 gulp.task('buildcss', function(){
