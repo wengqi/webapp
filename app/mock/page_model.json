@@ -1,0 +1,232 @@
+{
+    "models": [
+        {
+            "name": "TABLE",
+            "url": "./mock/table.json",
+            "controls": [
+                {
+                    "name": "WID",
+                    "dataType": "String",
+                    "caption": "WID",
+                    "dataSize": 40
+                },
+                {
+                    "name": "XSBH",
+                    "dataType": "String",
+                    "caption": "学生编号",
+                    "dataSize": 40
+                },
+                {
+                    "name": "XH",
+                    "dataType": "String",
+                    "caption": "学号",
+                    "dataSize": 20
+                },
+                {
+                    "name": "XM",
+                    "dataType": "String",
+                    "caption": "姓名",
+                    "dataSize": 90
+                },
+                {
+                    "name": "XBDM",
+                    "dataType": "String",
+                    "caption": "性别",
+                    "xtype": "select",
+                    "dataSize": 1,
+                    "url": "./mock/select.json"
+                },
+                {
+                    "name": "CSRQ",
+                    "dataType": "String",
+                    "caption": "出生日期",
+                    "xtype": "date-local",
+                    "dataSize": 10
+                },
+                {
+                    "name": "SFZJH",
+                    "dataType": "String",
+                    "caption": "身份证号",
+                    "dataSize": 20
+                },
+                {
+                    "name": "XZ",
+                    "dataType": "int",
+                    "caption": "学制",
+                    "dataSize": 6
+                },
+                {
+                    "name": "XSZP",
+                    "dataType": "String",
+                    "caption": "学生照片",
+                    "dataSize": 40
+                },
+                {
+                    "name": "ZSFJ",
+                    "dataType": "String",
+                    "caption": "证书附件",
+                    "dataSize": 40
+                }
+            ]
+        },
+        {
+            "name": "FORM_1",
+            "url": "./mock/form_1.json",
+            "controls": [
+                {
+                    "name": "CSRQ",
+                    "dataType": "String",
+                    "caption": "出生日期",
+                    "xtype": "date-local",
+                    "dataSize": 10
+                }
+            ]
+        },
+        {
+            "name": "FORM_X",
+            "url": "./mock/form_x.json",
+            "controls": [
+                {
+                    "name": "WID",
+                    "dataType": "String",
+                    "caption": "WID",
+                    "dataSize": 40
+                },
+                {
+                    "name": "XSBH",
+                    "dataType": "String",
+                    "caption": "学生编号",
+                    "dataSize": 40
+                },
+                {
+                    "name": "XM",
+                    "dataType": "String",
+                    "caption": "姓名",
+                    "dataSize": 60
+                },
+                {
+                    "name": "XBDM",
+                    "dataType": "String",
+                    "caption": "性别",
+                    "xtype": "select",
+                    "dataSize": 1,
+                    "url": "./mock/select.json"
+                },
+                {
+                    "name": "CSRQ",
+                    "dataType": "String",
+                    "caption": "出生日期",
+                    "dataSize": 30
+                },
+                {
+                    "name": "GZDW",
+                    "dataType": "String",
+                    "caption": "工作单位",
+                    "dataSize": 200
+                },
+                {
+                    "name": "LXFS",
+                    "dataType": "String",
+                    "caption": "联系方式",
+                    "dataSize": 200
+                },
+                {
+                    "name": "XSZP",
+                    "dataType": "String",
+                    "caption": "学生照片",
+                    "dataSize": 40
+                },
+                {
+                    "name": "ZSFJ",
+                    "dataType": "String",
+                    "caption": "证书附件",
+                    "dataSize": 40
+                }
+            ]
+        },
+        {
+            "name": "FORM_GROUP",
+            "url": "./mock/form_group.json",
+            "controls": [
+                {
+                    "name": "WID",
+                    "dataType": "String",
+                    "caption": "WID",
+                    "dataSize": 40,
+                    "groupName": ""
+                },
+                {
+                    "name": "XQAH",
+                    "dataType": "String",
+                    "caption": "兴趣爱好",
+                    "xtype": "radiolist",
+                    "dataSize": 1,
+                    "url": "./mock/radiolist.json",
+                    "groupName": ""
+                },
+                {
+                    "name": "XSBH",
+                    "dataType": "String",
+                    "caption": "学生编号",
+                    "dataSize": 40,
+                    "groupName": "分组一"
+                },
+                {
+                    "name": "XM",
+                    "dataType": "String",
+                    "caption": "姓名",
+                    "dataSize": 60,
+                    "groupName": "分组一"
+                },
+                {
+                    "name": "XBDM",
+                    "dataType": "String",
+                    "caption": "性别",
+                    "xtype": "select",
+                    "dataSize": 1,
+                    "url": "./mock/select.json",
+                    "groupName": "分组二"
+                },
+                {
+                    "name": "CSRQ",
+                    "dataType": "String",
+                    "caption": "出生日期",
+                    "dataSize": 30,
+                    "groupName": "分组二"
+                },
+                {
+                    "name": "GZDW",
+                    "dataType": "String",
+                    "caption": "工作单位",
+                    "dataSize": 200,
+                    "groupName": "分组三"
+                },
+                {
+                    "name": "LXFS",
+                    "dataType": "String",
+                    "caption": "联系方式",
+                    "dataSize": 200,
+                    "groupName": "分组三"
+                },
+                {
+                    "name": "XSZP",
+                    "dataType": "String",
+                    "caption": "学生照片",
+                    "dataSize": 40,
+                    "groupName": "分组三"
+
+                },
+                {
+                    "name": "ZSFJ",
+                    "dataType": "String",
+                    "caption": "证书附件",
+                    "dataSize": 40,
+                    "groupName": "分组三"
+                }
+            ]
+        }
+    ],
+    "routes": {},
+    "code": "0",
+    "datas": {}
+}

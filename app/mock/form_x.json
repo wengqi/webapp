@@ -1,0 +1,22 @@
+{
+    "code": "0",
+    "datas": {
+        "FORM_X": {
+            "totalSize": 1,
+            "pageSize": 1000,
+            "rows": [
+                {
+                    "WID": "1002",
+                    "XSBH": "bear0002",
+                    "XM": "熊二",
+                    "XBDM": "2",
+                    "CSRQ": "2016-01-01",
+                    "GZDW": "森林保护局",
+                    "LXFS": "18999999999",
+                    "XSZP": "./public/images/demo/user2.png",
+                    "ZSFJ": "xxxxx.txt"
+                }
+            ]
+        }
+    }
+}
