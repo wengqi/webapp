@@ -1,7 +1,6 @@
 var SYS_CONFIG = require('./system.config.js');
 var gulp = require('gulp');
 var watch = require('gulp-watch');
-var batch = require('gulp-batch');
 var gulpWebpack = require('gulp-webpack');
 var webpackConfig = require('./webpack.config');
 var webpackDevConfig = require('./webpack.dev.config');
