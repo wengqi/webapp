@@ -1,7 +1,7 @@
 var homeHtml = require('./home.html');
 var teachersTmp = require('./_teachers.tpl');
-var Services = require('../../core/service.js');
-var CONSTANT = require('../../core/constant.js');
+var Services = require('../../core/config.js');
+var CONSTANT = require('../../core/service.js');
 var U = require('../../core/util.js');
 
 console.log(CONSTANT.SYSTEM_NAME);

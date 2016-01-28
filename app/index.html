@@ -2,19 +2,32 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
-        <link rel="stylesheet" href="../node_modules/jqwidgets-framework/jqwidgets/styles/jqx.base.css" type="text/css" />
-        <link rel="stylesheet" href="//res.wisedu.com/fe_components/bh.css" type="text/css" />
-        <link rel="stylesheet" href="build/main.css" type="text/css" />
+        <title>webapp</title>
+        <link rel="stylesheet" href="${SERVER_PATH}/fe_components/jqwidget/blue/bh.min.css" id="bhThemes"/>
+        <link rel="stylesheet" href="${SERVER_PATH}/fe_components/jqwidget/blue/bh_core.min.css" id="bhThemes"/>
+        <link rel="stylesheet" href="${SERVER_PATH}/fe_components/iconfont/iconfont.css">
+        <!--[if IE 7]>
+        <![endif]-->
+        <link rel="stylesheet" href="styles/blue/main.css" type="text/css" id="bhScenceThemes"/>
     </head>
     <body>
-        <header></header>
-        <section id="main"></section>
-        <footer></footer>
+        <div id="headerPlaceholder"></div>
+
+        <div class="sc-container-outerFrame">
+            <div class="sc-container">
+                <div id="mainPlaceholder"></div>
+            </div>
+        </div>
+
+        <div id="footerPlaceholder"></div>
     </body>
-    <script src='lib/jquery-1.11.3.js'></script>
-    <script src='lib/director.js'></script>
-    <script src='../node_modules/jqwidgets-framework/jqwidgets/jqx-all.js'></script>
-    <script src='build/common.js'></script>
-    <script src='build/main.js'></script>
+    <script src="${SERVER_PATH}/fe_components/jquery-1.11.3.js"></script>
+    <script src="${SERVER_PATH}/fe_components/bh.js"></script>
+    <script src="${SERVER_PATH}/fe_components/director.js"></script>
+    <script src="${SERVER_PATH}/fe_components/jqwidget/jqxwidget.min.js"></script>
+    <script src="${SERVER_PATH}/fe_components/jqwidget/globalize.js"></script>
+    <script src="${SERVER_PATH}/fe_components/jqwidget/globalize.culture.zh-CN.js"></script>
+    <script src="${SERVER_PATH}/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="common.js"></script>
+    <script src="main.js"></script>
 </html>
