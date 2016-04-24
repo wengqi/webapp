@@ -24,6 +24,7 @@ var imageFiles = [SYS_CONFIG.SRC_PATH + '/images/**/*.*'];
 var scriptFiles = [SYS_CONFIG.SRC_PATH + '/index.js', SYS_CONFIG.SRC_PATH + '/core/**/*.js', SYS_CONFIG.SRC_PATH + '/modules/**/*.js'];
 var viewFiles = [SYS_CONFIG.SRC_PATH + '/modules/**/*.html', SYS_CONFIG.SRC_PATH + '/modules/**/*.tpl'];
 var styleFiles = [SYS_CONFIG.SRC_PATH + '/styles/**/*.css', SYS_CONFIG.SRC_PATH + '/modules/**/*.css'];
+var other_path = './__MACOSX';
 
 
 gulp.task('clean:src', function() {
@@ -32,6 +33,11 @@ gulp.task('clean:src', function() {
 
 gulp.task('clean:dist', function() {
     return del(SYS_CONFIG.DEPLOY_PATH);
+});
+
+//删除Mac下解压多出的__MACOSX文件夹
+gulp.task('clean:other', function() {
+    return del(other_path);
 });
 
 gulp.task('copy:images', function() {
@@ -91,7 +97,7 @@ gulp.task('default', function(cb) {
 
 gulp.task('deploy', function(cb) {
     watch(zipFile, function () {
-        runSequence('clean:src', 'unzip', 'build');
+        runSequence('clean:src', 'unzip', 'clean:other', 'build');
     });
 });
 

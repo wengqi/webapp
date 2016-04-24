@@ -8,7 +8,7 @@ module.exports = {
   entry: SYS_CONFIG.SRC_PATH + '/index.js',
 
   resolve: {
-    //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
+    //自动扩展文件后缀名，在require模块可以省略不写后缀名
     extensions: ['', '.js', '.css']
   },
 
